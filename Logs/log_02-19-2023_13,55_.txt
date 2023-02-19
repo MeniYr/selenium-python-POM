@@ -1,0 +1,11 @@
+
+name: Meni Rotblat.
+date: 2023-02-19 13:55:11.089712. 
+description: test fail => function: Exception_test_general params:  details: 'str' object has no attribute 'read'.
+pic:C:/Python/AutomationProject/Screenshots/bug_02.19.2023_13:55:11.png
+                     
+name: Meni Rotblat.
+date: 2023-02-19 13:55:18.926909. 
+description: test fail => function: Exception_test_general params:  details: 'str' object has no attribute 'read'.
+pic:C:/Python/AutomationProject/Screenshots/bug_02.19.2023_13:55:18.png
+                     

@@ -1,0 +1,197 @@
+{
+	"data":
+	{
+		"general": {
+			"id": 1,
+			"title": "Automation Project",
+			"wrongValues":[
+				123,
+				"aaa"
+			]
+		} ,
+
+		"pesonal_details":{
+
+			"firstName": {
+				"id": 1,
+				"trueVal":[
+					"Meni",
+					"M",
+					"m"
+				],
+				"wrongValues":[
+					123,
+					"!@#",
+					""
+				]
+			},
+
+			"lastName": {
+				"id": 2,
+				"trueVal":[
+					"Rotblat",
+					"r",
+					"R"
+				],
+				"wrongValues":[
+					123,
+					"!@#",
+					""
+				]
+			},
+
+			"city": {
+				"id": 3,
+				"trueVal": [
+					"Tel Aviv",
+					"Jerusalem",
+					"Hiffa",
+					"Beer Sheva"
+				]
+
+			},
+
+			"email": {
+				"id": 4,
+				"trueVal": [
+					"mi@hotmail.com",
+					"hem@walla.com",
+					"there@is.co.il",
+					"exem@gmail.com"
+				],
+				"wrongValues":[
+					123,
+					"!@#",
+					""
+				]
+
+			},
+
+			"phone": {
+				"id": 5,
+				"trueVal": [
+					"1234567"
+				],
+				"wrongValues":[
+					1234567,
+					"12345678",
+					"123456",
+					"",
+					"abcdefg"
+				]
+			},
+
+			"checkbocks": {
+				"id": 6,
+				"trueVal": 	[
+					{
+					"Female":[
+							{"name": "gender"},
+							{"value":"F"}
+						]
+					},
+					{
+						"Male":[
+							{"name": "gender"},
+							{"value":"M"}
+						]
+					},
+					{
+						"Other":[
+							{"name": "gender"},
+							{"value":"O"}
+						]
+					},
+					{
+						"Math":[
+							{"name": "math"},
+							{"value":"M"}
+						]
+					},
+					{
+						"Physics":[
+							{"name": "pyhs"},
+							{"value":"P"}
+						]
+					},
+					{
+						"POP":[
+							{"name": "gender"},
+							{"value":"P"}
+						]
+					},
+					{
+						"DUD":[
+							{"name": "gender"},
+							{"value":"M"}
+						]
+					},
+					{
+						"Biology":[
+							{"name": "bio"},
+							{"value":"B"}
+						]
+					},
+					{
+						"Chemistry":[
+							{"name": "chem"},
+							{"value":"C"}
+						]
+					},
+					{
+						"English":[
+							{"name": "eng"},
+							{"value":"E"}
+						]
+					}
+				]
+				},
+
+			"buttons": {
+				"id": 7
+			}
+
+		},
+
+		"buttons":{
+			"setText":{
+				"id": 1,
+				"trueVal":[
+					"123",
+					1,
+					"abc",
+					"!@#$%^&*()",
+					"aA",
+					-1
+				]
+			},
+			"loading":{
+				"id": 2,
+				"trueVal": "Finish"
+			}
+		},
+
+		"links":{
+			"nextPage":{
+				"id": 1,
+				"trueVal": "Finish",
+				"wrongValues":"Next Page"
+			},
+			"Windy":{
+				"id": 2,
+				"trueVal": "Windy: Wind map & weather forecast"
+			},
+			"Tera Santa":{
+				"id": 3,
+				"trueVal": "TERRASANTA SEAKAYAK EXPEDITIONS | טרה סנטה קיאקים ימיים – SEAKAYAK EXPEDITIONS"
+			},
+			"JavaBook":{
+				"id": 4
+			},
+			"YouTube":{
+				"id": 5,
+				"trueVal": "(4) YouTube"
+			}
+		}
+	}
+}

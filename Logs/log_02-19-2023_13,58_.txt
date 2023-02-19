@@ -1,0 +1,11 @@
+
+name: Meni Rotblat.
+date: 2023-02-19 13:58:26.153417. 
+description: test fail => function: Exception_test_general params:  details: 'general'.
+pic:C:/Python/AutomationProject/Screenshots/bug_02.19.2023_13:58:26.png
+                     
+name: Meni Rotblat.
+date: 2023-02-19 13:58:52.559118. 
+description: test fail => function: Exception_test_general params:  details: 'general'.
+pic:C:/Python/AutomationProject/Screenshots/bug_02.19.2023_13:58:52.png
+                     

@@ -1,0 +1,6 @@
+
+name: Meni Rotblat.
+date: 2023-02-19 13:39:40.858455. 
+description: test pass => function: check_title params: Automation Project.
+pic:f'C:/Python/AutomationProject/Screenshots/bug_{time.strftime("%m.%d.%Y_%H-%M-%S",time.localtime())}.png'
+                     

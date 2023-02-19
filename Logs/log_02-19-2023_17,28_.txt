@@ -1,0 +1,14 @@
+
+name: Meni Rotblat.
+date: 2023-02-19 17:28:29.711573. 
+description: test pass => function: check_title params: Automation Project.
+pic:None
+                     
+name: Meni Rotblat.
+date: 2023-02-19 17:28:32.912721. 
+description: test fail => function: test_personals_fname params: <class 'list'> details: assert None
+ +  where None = <bound method AutomationPage.fname of <Tests.Pages.automation.AutomationPage object at 0x000002237BE8FFD0>>('Meni')
+ +    where <bound method AutomationPage.fname of <Tests.Pages.automation.AutomationPage object at 0x000002237BE8FFD0>> = <Tests.Pages.automation.AutomationPage object at 0x000002237BE8FFD0>.fname
+ +      where <Tests.Pages.automation.AutomationPage object at 0x000002237BE8FFD0> = <Tests.testcases.test_automation.TestAutomation object at 0x000002237BEB4FD0>.au.
+pic:C:/Python/AutomationProject/Screenshots/bug_02.19.2023_17-28-29.png
+                     

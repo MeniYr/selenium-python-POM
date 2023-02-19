@@ -1,0 +1,11 @@
+
+name: Meni Rotblat.
+date: 2023-02-19 17:22:42.345602. 
+description: test pass => function: check_title params: Automation Project.
+pic:None
+                     
+name: Meni Rotblat.
+date: 2023-02-19 17:22:42.595397. 
+description: test fail => function: test_personals_fname params:  details: 'pesonal_details'.
+pic:C:/Python/AutomationProject/Screenshots/bug_02.19.2023_17-22-42.png
+                     
