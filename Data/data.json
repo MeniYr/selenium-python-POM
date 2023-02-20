@@ -69,7 +69,14 @@
 
 			"phone": {
 				"id": 5,
+				"area_Code": [
+					"050",
+					"052",
+					"053",
+					"054"
+				],
 				"trueVal": [
+					"7654321",
 					"1234567"
 				],
 				"wrongValues":[
@@ -145,11 +152,7 @@
 						]
 					}
 				]
-				},
-
-			"buttons": {
-				"id": 7
-			}
+				}
 
 		},
 
@@ -174,14 +177,14 @@
 		"links":{
 			"nextPage":{
 				"id": 1,
-				"trueVal": "Finish",
-				"wrongValues":"Next Page"
+				"initVal":"Next Page",
+				"finalVal": "Finish"
 			},
 			"Windy":{
 				"id": 2,
 				"trueVal": "Windy: Wind map & weather forecast"
 			},
-			"Tera Santa":{
+			"TeraSanta":{
 				"id": 3,
 				"trueVal": "TERRASANTA SEAKAYAK EXPEDITIONS | טרה סנטה קיאקים ימיים – SEAKAYAK EXPEDITIONS"
 			},
@@ -190,7 +193,7 @@
 			},
 			"YouTube":{
 				"id": 5,
-				"trueVal": "(4) YouTube"
+				"trueVal": "YouTube"
 			}
 		}
 	}

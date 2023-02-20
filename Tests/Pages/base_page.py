@@ -16,7 +16,6 @@ class BasePage:
 
 
     def check_title(self, title):
-            img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
             gettitle = self.driver.title
             return gettitle == title
 

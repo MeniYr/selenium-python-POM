@@ -1,6 +1,0 @@
-
-name: Meni Rotblat.
-date: 2023-02-19 13:57:54.355734. 
-description: test pass => function: check_title params: Automation Project.
-pic:C:/Python/AutomationProject/Screenshots/bug_02.19.2023_13-57-54.png
-                     

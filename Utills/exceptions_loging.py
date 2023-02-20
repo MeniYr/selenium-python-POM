@@ -5,13 +5,15 @@ import time
 
 class Exceptions_logs(object):
 
+    def __init__(self, name):
+        self.name = name
 
     def send(self, e, pic_name="no pic to save"):
         try:
             os.chdir("C:/Python/AutomationProject/Logs")
-            self.f = open(f'log_{str(time.strftime("%m-%d-%Y_%H,%M", time.localtime()))}_.txt', 'a')
+            self.f = open(f'log_{self.name}_.txt', 'a')
             if self.f.tell() > (1000 * 1024):
-                self.f = open(f'../log_{time.strftime("%m/%d/%Y_%H:%M", time.localtime())}.txt', 'a')
+                self.f = open(f'../log_{time.strftime("%m-%d-%Y_%H,%M", time.localtime())}.txt', 'a')
                 raise ValueError(f'file is up to 1000kb {self.f.tell()}, open new file')
             else:
                 date = datetime.datetime.now()

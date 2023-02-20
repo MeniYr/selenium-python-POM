@@ -1,6 +1,0 @@
-
-name: Meni Rotblat.
-date: 2023-02-19 20:43:06.992213. 
-description: test pass => function: test_personals_fname params: ['Meni', 'M', 'm'].
-pic:None
-                     
