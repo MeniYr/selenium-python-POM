@@ -16,6 +16,11 @@ class BasePage:
 
 
     def check_title(self, title):
-            gettitle = self.driver.title
-            return gettitle == title
+        """
+        Name: meni rotblat\n
+        Description: check title of correct driver and return is params equals as boolean\n
+        Date: 21.2.23\n
+        """
+        gettitle = self.driver.title
+        return gettitle == title
 

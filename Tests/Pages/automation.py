@@ -32,6 +32,12 @@ class AutomationPage(BasePage):
     #  personal details
 
     def fname(self, kyes):
+        """
+        Name: meni rotblat\n
+        Description: collect input element first name and send vals\n
+        Date: 21.2.23\n
+        :param kyes:
+        """
         try:
             # print()
             input = self.driver.find_element(*PersonalDetailsLocator.check_fname)
@@ -44,6 +50,12 @@ class AutomationPage(BasePage):
                                  pic_name=self.img_name.format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime())))
 
     def lname(self, kyes):
+        """
+        Name: meni rotblat\n
+        Description: collect input element last name and send vals\n
+        :param kyes: \n
+        Date: 21.2.23\n
+        """
         try:
             input = self.driver.find_element(*PersonalDetailsLocator.check_lname)
             input.clear()
@@ -58,12 +70,16 @@ class AutomationPage(BasePage):
                                      time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime())))
 
     def city(self, city):
+        """
+        Name: meni rotblat\n
+        Description: collect downdrop element of city and send pick city val\n
+        :param city: \n
+        Date: 21.2.23\n
+        """
         try:
             drop = self.driver.find_element(*PersonalDetailsLocator.check_city)
             dropdown = select(drop)
             dropdown.select_by_visible_text(city)
-            # print(dropdown.first_selected_option.text)
-            # print(dropdown.first_selected_option.get_attribute("value"))
         except Exception as e:
             img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
             self.driver.save_screenshot(img_name)
@@ -71,6 +87,12 @@ class AutomationPage(BasePage):
                                  pic_name=self.img_name.format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime())))
 
     def email(self, Email):
+        """
+        Name: meni rotblat\n
+        Description: collect input element of email and send it val\n
+        :param Email: \n
+        Date: 21.2.23\n
+        """
         try:
             email = self.driver.find_element(*PersonalDetailsLocator.check_email)
             email.clear()
@@ -83,6 +105,12 @@ class AutomationPage(BasePage):
                                  pic_name=self.img_name.format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime())))
 
     def areaCode(self,areaCode):
+        """
+        Name: meni rotblat\n
+        Description: collect select element of areaCode and pick from it val\n
+        :param areaCode: \n
+        Date: 21.2.23\n
+        """
         try:
             drop = self.driver.find_element(*PersonalDetailsLocator.check_areaCode)
             dropdown = select(drop)
@@ -94,6 +122,12 @@ class AutomationPage(BasePage):
                                  pic_name=self.img_name.format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime())))
 
     def sel(self,Phone):
+        """
+        Name: meni rotblat\n
+        Description: collect input element of phone number and put on it val\n
+        :param Phone:\n
+        Date: 21.2.23\n
+        """
         try:
             phone = self.driver.find_element(*PersonalDetailsLocator.check_sel)
             phone.clear()
@@ -105,6 +139,11 @@ class AutomationPage(BasePage):
                                  pic_name=self.img_name.format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime())))
 
     def checkbox_Female(self):
+        """
+        Name: meni rotblat\n
+        Description: collect checkbox input Female element and checking it\n
+        Date: 21.2.23\n
+        """
         try:
             checkbox = self.driver.find_element(*PersonalDetailsLocator.check_checkbox_Female)
             checkbox.click()
@@ -115,6 +154,11 @@ class AutomationPage(BasePage):
                                  pic_name=self.img_name.format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime())))
 
     def checkbox_Male(self):
+        """
+        Name: meni rotblat\n
+        Description: collect checkbox input Male element and checking it\n
+        Date: 21.2.23\n
+        """
         try:
             checkbox = self.driver.find_element(*PersonalDetailsLocator.check_checkbox_Male)
             checkbox.click()
@@ -125,6 +169,11 @@ class AutomationPage(BasePage):
                                  pic_name=self.img_name.format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime())))
 
     def checkbox_Other(self):
+        """
+        Name: meni rotblat\n
+        Description: collect checkbox Other Male element and checking it\n
+        Date: 21.2.23\n
+        """
         try:
             checkbox = self.driver.find_element(*PersonalDetailsLocator.check_checkbox_Other)
             checkbox.click()
@@ -135,6 +184,11 @@ class AutomationPage(BasePage):
                                  pic_name=self.img_name.format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime())))
 
     def checkbox_Math(self):
+        """
+        Name: meni rotblat\n
+        Description: collect checkbox Math Male element and checking it\n
+        Date: 21.2.23\n
+        """
         try:
             checkbox = self.driver.find_element(*PersonalDetailsLocator.check_checkbox_Math)
             checkbox.click()
@@ -145,6 +199,11 @@ class AutomationPage(BasePage):
                                  pic_name=self.img_name.format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime())))
 
     def checkbox_Physics(self):
+        """
+        Name: meni rotblat\n
+        Description: collect checkbox Physics Male element and checking it\n
+        Date: 21.2.23\n
+        """
         try:
             checkbox = self.driver.find_element(*PersonalDetailsLocator.check_checkbox_Physics)
             checkbox.click()
@@ -155,6 +214,11 @@ class AutomationPage(BasePage):
                                  pic_name=self.img_name.format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime())))
 
     def checkbox_POP(self):
+        """
+        Name: meni rotblat\n
+        Description: collect checkbox POP element and checking it\n
+        Date: 21.2.23\n
+        """
         try:
             checkbox = self.driver.find_element(*PersonalDetailsLocator.check_checkbox_POP)
             checkbox.click()
@@ -165,6 +229,11 @@ class AutomationPage(BasePage):
                                  pic_name=self.img_name.format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime())))
 
     def checkbox_DUD(self):
+        """
+        Name: meni rotblat\n
+        Description: collect checkbox DUD element and checking it\n
+        Date: 21.2.23\n
+        """
         try:
             checkbox = self.driver.find_element(*PersonalDetailsLocator.check_checkbox_DUD)
             checkbox.click()
@@ -175,6 +244,11 @@ class AutomationPage(BasePage):
                                  pic_name=self.img_name.format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime())))
 
     def checkbox_Biology(self):
+        """
+        Name: meni rotblat\n
+        Description: collect checkbox Biology element and checking it\n
+        Date: 21.2.23\n
+        """
         try:
             checkbox = self.driver.find_element(*PersonalDetailsLocator.check_checkbox_Biology)
             checkbox.click()
@@ -185,6 +259,11 @@ class AutomationPage(BasePage):
                                  pic_name=self.img_name.format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime())))
 
     def checkbox_Chemistry(self):
+        """
+        Name: meni rotblat\n
+        Description: collect checkbox Chemistry element and checking it\n
+        Date: 21.2.23\n
+        """
         try:
             checkbox = self.driver.find_element(*PersonalDetailsLocator.check_checkbox_Chemistry)
             checkbox.click()
@@ -195,6 +274,11 @@ class AutomationPage(BasePage):
                                  pic_name=self.img_name.format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime())))
 
     def checkbox_English(self):
+        """
+        Name: meni rotblat\n
+        Description: collect checkbox English element and checking it\n
+        Date: 21.2.23\n
+        """
         try:
             checkbox = self.driver.find_element(*PersonalDetailsLocator.check_checkbox_English)
             checkbox.click()
@@ -206,6 +290,11 @@ class AutomationPage(BasePage):
 
     # buttons
     def clear_button(self):
+        """
+        Name: meni rotblat\n
+        Description: collect clear button element and click on it\n
+        Date: 21.2.23\n
+        """
         try:
             checkbox = self.driver.find_element(*PersonalDetailsLocator.check_clear_b)
             checkbox.click()
@@ -216,6 +305,11 @@ class AutomationPage(BasePage):
                                  pic_name=self.img_name.format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime())))
 
     def send_button(self):
+        """
+        Name: meni rotblat\n
+        Description: collect sent button element and click on it\n
+        Date: 21.2.23\n
+        """
         try:
             checkbox = self.driver.find_element(*PersonalDetailsLocator.check_send_b)
             checkbox.click()
@@ -228,6 +322,11 @@ class AutomationPage(BasePage):
 #  JS buttons
 
     def stext(self, val):
+        """
+        Name: meni rotblat\n
+        Description: collect text area and alert elements and click on it, fill an alert element and accept on it\n
+        Date: 21.2.23\n
+        """
         try:
             alert = self.driver.find_element(*PersonalDetailsLocator.check_stext_alert)
             alert.click()
@@ -249,6 +348,11 @@ class AutomationPage(BasePage):
                                  pic_name=self.img_name.format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime())))
 
     def loading(self):
+        """
+        Name: meni rotblat\n
+        Description: collect loading button element and click on it\n
+        Date: 21.2.23\n
+        """
         try:
             loading = self.driver.find_element(*PersonalDetailsLocator.check_loading)
             loading.click()
@@ -262,6 +366,11 @@ class AutomationPage(BasePage):
 #  links
 
     def nextPage(self):
+        """
+        Name: meni rotblat\n
+        Description: collect link element and click on it\n
+        Date: 21.2.23\n
+        """
         try:
             snext_link = self.driver.find_element(*PersonalDetailsLocator.nextPage).get_attribute("href")
             parent_handle = self.driver.current_window_handle
@@ -279,6 +388,11 @@ class AutomationPage(BasePage):
                                  pic_name=self.img_name.format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime())))
 
     def Windy(self):
+        """
+        Name: meni rotblat\n
+        Description: collect link element and click on it\n
+        Date: 21.2.23\n
+        """
         try:
             windy_link = self.driver.find_element(*PersonalDetailsLocator.Windy).get_attribute("href")
             parent_handle = self.driver.current_window_handle
@@ -296,6 +410,11 @@ class AutomationPage(BasePage):
                                  pic_name=self.img_name.format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime())))
 
     def TeraSanta(self):
+        """
+        Name: meni rotblat\n
+        Description: collect link element and click on it\n
+        Date: 21.2.23\n
+        """
         try:
             tera_link = self.driver.find_element(*PersonalDetailsLocator.TeraSanta).get_attribute("href")
             parent_handle = self.driver.current_window_handle
@@ -314,6 +433,11 @@ class AutomationPage(BasePage):
                                      time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime())))
 
     def JavaBook(self):
+        """
+        Name: meni rotblat\n
+        Description: collect link element and click on it\n
+        Date: 21.2.23\n
+        """
         try:
             java_link = self.driver.find_element(*PersonalDetailsLocator.JavaBook).get_attribute("href")
             parent_handle = self.driver.current_window_handle
@@ -333,6 +457,11 @@ class AutomationPage(BasePage):
             assert False
 
     def youTube(self):
+        """
+        Name: meni rotblat\n
+        Description: collect link element and click on it\n
+        Date: 21.2.23\n
+        """
         try:
             yt_link = self.driver.find_element(*PersonalDetailsLocator.YouTube).get_attribute("href")
             parent_handle = self.driver.current_window_handle

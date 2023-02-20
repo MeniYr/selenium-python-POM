@@ -22,6 +22,11 @@ class NextPage(BasePage):
         self.img_name = self.config["IMG_LOCATION"]
 
     def change_title(self, val):
+        """
+        Name: meni rotblat\n
+        Description: change title and waits to new title by clicking on btn. return the new title\n
+        Date: 21.2.23\n
+        """
         try:
             npage = self.driver.find_element(*NextPageLocators.nextPage)
             npage.click()

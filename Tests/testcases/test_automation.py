@@ -41,6 +41,11 @@ class TestAutomation():
 #  personal details
     @pytest.mark.personals_fname
     def test_personals_fname(self):
+        """
+        Name: meni rotblat\n
+        Description: tests first name input\n
+        Date: 21.2.23\n
+        """
         img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
         try:
             for i in self.data["data"]["pesonal_details"]["firstName"]["trueVal"]:
@@ -70,6 +75,11 @@ class TestAutomation():
 
     @pytest.mark.personals_lname
     def test_personals_lname(self):
+        """
+        Name: meni rotblat\n
+        Description: tests last name input\n
+        Date: 21.2.23\n
+        """
         img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
         try:
             for i in self.data["data"]["pesonal_details"]["lastName"]["trueVal"]:
@@ -100,6 +110,11 @@ class TestAutomation():
 
     @pytest.mark.personals_city
     def test_personals_city(self):
+        """
+        Name: meni rotblat\n
+        Description: tests city dropdown\n
+        Date: 21.2.23\n
+        """
         img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
         try:
             for i in self.data["data"]["pesonal_details"]["city"]["trueVal"]:
@@ -127,6 +142,11 @@ class TestAutomation():
 
     @pytest.mark.personals_email
     def test_personals_email(self):
+        """
+        Name: meni rotblat\n
+        Description: tests email input\n
+        Date: 21.2.23\n
+        """
         img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
         try:
             rule = r"[a-z]*@[a-z]+\.[a-z]+"
@@ -156,7 +176,11 @@ class TestAutomation():
 
     @pytest.mark.personals_area
     def test_personals_areaCode(self):
-
+        """
+        Name: meni rotblat\n
+        Description: tests erea code dropdown dropdown\n
+        Date: 21.2.23\n
+        """
         img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
         try:
             for i in self.data["data"]["pesonal_details"]["phone"]["area_Code"]:
@@ -183,6 +207,11 @@ class TestAutomation():
 
     @pytest.mark.personals_sel
     def test_personals_sel(self):
+        """
+        Name: meni rotblat\n
+        Description: tests selephon input\n
+        Date: 21.2.23\n
+        """
         img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
         try:
             # true vals
@@ -218,6 +247,11 @@ class TestAutomation():
 
     @pytest.mark.personals_checkbox
     def test_personals_chekbox(self):
+        """
+        Name: meni rotblat\n
+        Description: tests checkboxes\n
+        Date: 21.2.23\n
+        """
         img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
         try:
             self.au.checkbox_Female()
@@ -275,6 +309,11 @@ class TestAutomation():
 
     @pytest.mark.personals_clear
     def test_personals_clear_button(self):
+        """
+        Name: meni rotblat\n
+        Description: tests the clear btn aster fill some inputs\n
+        Date: 21.2.23\n
+        """
         img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
         try:
             self.au.checkbox_Female()
@@ -326,6 +365,11 @@ class TestAutomation():
 
     @pytest.mark.personals_send
     def test_personals_send_button(self):
+        """
+        Name: meni rotblat\n
+        Description: tests sent btn after fiiling some inputs\n
+        Date: 21.2.23\n
+        """
         img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
         try:
             email = self.data["data"]["pesonal_details"]["email"]["trueVal"][0]
@@ -355,6 +399,11 @@ class TestAutomation():
 #  js buttons
     @pytest.mark.jsbtns_stext
     def test_jsbtns_stext(self):
+        """
+        Name: meni rotblat\n
+        Description: tests js button alert text\n
+        Date: 21.2.23\n
+        """
         img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
         try:
             for i in self.data["data"]["buttons"]["setText"]["trueVal"]:
@@ -379,6 +428,11 @@ class TestAutomation():
 
     @pytest.mark.jsbtns_l
     def test_jsbtns_loading(self):
+        """
+        Name: meni rotblat\n
+        Description: tests loading btn so that after waiting, check if value is changed\n
+        Date: 21.2.23\n
+        """
         img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
         try:
             self.au.loading()
@@ -403,6 +457,11 @@ class TestAutomation():
 #  links
     @pytest.mark.np
     def test_next_page(self):
+        """
+        Name: meni rotblat\n
+        Description: tests next page link\n
+        Date: 21.2.23\n
+        """
         img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
         try:
             title = self.au.nextPage()
@@ -426,6 +485,11 @@ class TestAutomation():
 
     @pytest.mark.win
     def test_windy(self):
+        """
+        Name: meni rotblat\n
+        Description: tests windy link\n
+        Date: 21.2.23\n
+        """
         img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
         try:
             title = self.au.Windy()
@@ -451,6 +515,11 @@ class TestAutomation():
 
     @pytest.mark.ts
     def test_terasenta(self):
+        """
+        Name: meni rotblat\n
+        Description: tests terasenta link\n
+        Date: 21.2.23\n
+        """
         img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
         try:
             title = self.au.TeraSanta()
@@ -475,6 +544,11 @@ class TestAutomation():
 
     @pytest.mark.jb
     def test_javabook(self):
+        """
+        Name: meni rotblat\n
+        Description: tests javabook link\n
+        Date: 21.2.23\n
+        """
         img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
         try:
 
@@ -500,6 +574,11 @@ class TestAutomation():
 
     @pytest.mark.yt
     def test_youtube(self):
+        """
+        Name: meni rotblat\n
+        Description: tests youtube link\n
+        Date: 21.2.23\n
+        """
         img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
         try:
             title = self.au.youTube()
