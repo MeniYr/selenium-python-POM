@@ -43,7 +43,8 @@ class AutomationPage(BasePage):
             input = self.driver.find_element(*PersonalDetailsLocator.check_fname)
             input.clear()
             input.send_keys(kyes)
-            assert input.get_attribute("valitationMessage ") == ""
+            if input.get_attribute("valitation_message") == "":
+                raise AssertionError
             time.sleep(1)
         except Exception as e:
             self.log.send(e=self.config["TEST_FAIL"].format("Exception_test_general", "", e),
@@ -60,7 +61,8 @@ class AutomationPage(BasePage):
             input = self.driver.find_element(*PersonalDetailsLocator.check_lname)
             input.clear()
             input.send_keys(kyes)
-            assert input.get_attribute("valitationMessage ") == ""
+            if input.get_attribute("valitation_message") == "":
+                raise AssertionError
             time.sleep(1)
         except Exception as e:
             img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
@@ -97,7 +99,8 @@ class AutomationPage(BasePage):
             email = self.driver.find_element(*PersonalDetailsLocator.check_email)
             email.clear()
             email.send_keys(Email)
-            assert email.get_attribute("valitationMessage ") == ""
+            if input.get_attribute("valitation_message") == "":
+                raise AssertionError
         except Exception as e:
             img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
             self.driver.save_screenshot(img_name)

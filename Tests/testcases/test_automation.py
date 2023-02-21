@@ -47,31 +47,38 @@ class TestAutomation():
         Date: 21.2.23\n
         """
         img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
-        try:
-            for i in self.data["data"]["pesonal_details"]["firstName"]["trueVal"]:
+        for i in self.data["data"]["pesonal_details"]["firstName"]["trueVal"]:
+            try:
                 self.au.fname(i)
                 assert self.res.fname() == i
-            for i in self.data["data"]["pesonal_details"]["firstName"]["wrongValues"]:
+                self.log.send(e=self.config["TEST_PASS"].format("test_personals_fname",
+                                                                self.data["data"]["pesonal_details"][
+                                                                    "firstName"]["trueVal"]), pic_name=None)
+            except Exception as e:
+                self.driver.save_screenshot(filename=img_name)
+                self.log.send(e=self.config["TEST_FAIL"].format("test_personals_fname",
+                                                            self.data["data"]["pesonal_details"][
+                                                                "firstName"]["trueVal"], e),
+                          pic_name=img_name)
+
+        for i in self.data["data"]["pesonal_details"]["firstName"]["wrongValues"]:
+            try:
                 self.au.fname(i)
                 assert self.res.fname() == ''
+                self.log.send(e=self.config["TEST_PASS"].format("test_personals_fname",
+                                                                self.data["data"]["pesonal_details"][
+                                                                    "firstName"]["wrongValues"]), pic_name=None)
+            except AssertionError as a:
+                self.driver.save_screenshot(filename=img_name)
+                self.log.send(e=self.config["ASSERT_FAIL"].format("test_personals_fname",
+                                                                  self.data["data"]["pesonal_details"][
+                                                                      "firstName"]["wrongValues"], a),
+                              pic_name=img_name)
 
-            self.log.send( e=self.config["TEST_PASS"].format("test_personals_fname",
-                                                                         self.data["data"]["pesonal_details"][
-                                                                             "firstName"]["trueVal"]), pic_name=None)
-        except Exception as e:
-            self.driver.save_screenshot(filename=img_name)
-            self.log.send( e=self.config["TEST_FAIL"].format("test_personals_fname",
-                                                                         self.data["data"]["pesonal_details"][
-                                                                             "firstName"]["trueVal"], e),
-                                 pic_name=img_name)
-            assert False, e
-        except AssertionError as ae:
-            self.driver.save_screenshot(filename=img_name)
-            self.log.send( e=self.config["ASSERT_FAIL"].format("test_personals_fname",
-                                                                           self.data["data"]["pesonal_details"][
-                                                                               "firstName"]["trueVal"], ae),
-                                 pic_name=img_name)
-            assert False, ae
+
+
+
+            # assert False, e
 
     @pytest.mark.personals_lname
     def test_personals_lname(self):
@@ -81,32 +88,35 @@ class TestAutomation():
         Date: 21.2.23\n
         """
         img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
-        try:
-            for i in self.data["data"]["pesonal_details"]["lastName"]["trueVal"]:
+        for i in self.data["data"]["pesonal_details"]["lastName"]["trueVal"]:
+            try:
                 self.au.lname(i)
                 time.sleep(1)
                 assert self.res.lname() == i
-            for i in self.data["data"]["pesonal_details"]["lastName"]["wrongValues"]:
+                self.log.send( e=self.config["TEST_PASS"].format("test_personals_lname",
+                                                                         self.data["data"]["pesonal_details"][
+                                                                             "lastName"]["trueVal"]), pic_name=None)
+            except Exception as e:
+                self.driver.save_screenshot(filename=img_name)
+                self.log.send(e=self.config["TEST_FAIL"].format("test_personals_lname",
+                                                                self.data["data"]["pesonal_details"][
+                                                                    "lastName"]["trueVal"], e),
+                              pic_name=img_name)
+
+        for i in self.data["data"]["pesonal_details"]["lastName"]["wrongValues"]:
+            try:
                 self.au.lname(i)
                 time.sleep(1)
                 assert self.res.lname() == ''
-            self.log.send( e=self.config["TEST_PASS"].format("test_personals_lname",
+                self.log.send( e=self.config["TEST_PASS"].format("test_personals_lname",
                                                                          self.data["data"]["pesonal_details"][
                                                                              "lastName"]["trueVal"]), pic_name=None)
-        except Exception as e:
-            self.driver.save_screenshot(filename=img_name)
-            self.log.send(e=self.config["TEST_FAIL"].format("test_personals_lname",
-                                                                         self.data["data"]["pesonal_details"][
-                                                                             "lastName"]["trueVal"], e),
-                                 pic_name=img_name)
-            assert False, e
-        except AssertionError as ae:
-            self.driver.save_screenshot(filename=img_name)
-            self.log.send( e=self.config["ASSERT_FAIL"].format("test_personals_lname",
-                                                                           self.data["data"]["pesonal_details"][
-                                                                               "lastName"]["trueVal"], ae),
-                                 pic_name=img_name)
-            assert False, ae
+            except AssertionError as ae:
+                self.driver.save_screenshot(filename=img_name)
+                self.log.send(e=self.config["ASSERT_FAIL"].format("test_personals_lname",
+                                                                  self.data["data"]["pesonal_details"][
+                                                                      "lastName"]["trueVal"], ae),pic_name=img_name)
+
 
     @pytest.mark.personals_city
     def test_personals_city(self):
@@ -116,29 +126,25 @@ class TestAutomation():
         Date: 21.2.23\n
         """
         img_name = self.config["IMG_LOCATION"].format(time.strftime("%m.%d.%Y_%H-%M-%S", time.localtime()))
-        try:
-            for i in self.data["data"]["pesonal_details"]["city"]["trueVal"]:
+
+        for i in self.data["data"]["pesonal_details"]["city"]["trueVal"]:
+            try:
                 self.au.city(i)
                 time.sleep(1)
                 assert self.res.city(i) == i
+                self.log.send(e=self.config["TEST_PASS"].format("test_personals_fname",
+                                                                self.data["data"]["pesonal_details"][
+                                                                    "city"]["trueVal"]), pic_name=None)
+            except AssertionError as ae:
+                self.driver.save_screenshot(filename=img_name)
+                self.log.send(e=self.config["ASSERT_FAIL"].format("test_personals_lname",
+                                                                  self.data["data"]["pesonal_details"][
+                                                                      "city"]["trueVal"], ae),
+                              pic_name=img_name)
 
-            self.log.send( e=self.config["TEST_PASS"].format("test_personals_fname",
-                                                                         self.data["data"]["pesonal_details"][
-                                                                             "city"]["trueVal"]), pic_name=None)
-        except Exception as e:
-            self.driver.save_screenshot(filename=img_name)
-            self.log.send( e=self.config["TEST_FAIL"].format("test_personals_lname",
-                                                                         self.data["data"]["pesonal_details"][
-                                                                             "city"]["trueVal"], e),
-                                 pic_name=img_name)
-            assert False, e
-        except AssertionError as ae:
-            self.driver.save_screenshot(filename=img_name)
-            self.log.send( e=self.config["ASSERT_FAIL"].format("test_personals_lname",
-                                                                           self.data["data"]["pesonal_details"][
-                                                                               "city"]["trueVal"], ae),
-                                 pic_name=img_name)
-            assert False, ae
+
+
+
 
     @pytest.mark.personals_email
     def test_personals_email(self):
